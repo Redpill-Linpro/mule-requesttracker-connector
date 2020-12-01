@@ -1,0 +1,5 @@
+RT/5.0.0 200 Ok
+
+id: ticket/1/links
+
+DependedOnBy: fsck.com-rt://your.server.com/ticket/1

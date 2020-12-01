@@ -1,0 +1,222 @@
+RT/5.0.0 200 Ok
+
+# 1/9 (id/187/total)
+
+id: 187
+Ticket: 23
+TimeTaken: 0
+Type: Create
+Field:
+OldValue:
+NewValue:
+Data:
+Description: Ticket created by root
+
+Content: A longer description
+
+         WIth more lines than ever!
+
+Creator: root
+Created: 2020-10-22 08:02:20
+
+Attachments:
+             61: untitled (50b)
+
+
+--
+
+# 1/9 (id/188/total)
+
+id: 188
+Ticket: 23
+TimeTaken: 0
+Type: EmailRecord
+Field:
+OldValue:
+NewValue:
+Data: <rt-5.0.0-14-1603353740-819.23-7-0@example.com>
+Description: Outgoing email recorded by RT_System
+
+Content: Greetings,
+
+         This message has been automatically generated in response to the creation of a
+         trouble ticket regarding A short description, a summary of which appears
+         below.
+
+         There is no need to reply to this message right now. Your ticket has been
+         assigned an ID of [example.com #23].
+
+         Please include the string [example.com #23] in the subject line of all future
+         correspondence about this issue. To do so, you may reply to this message.
+
+         Thank you,
+
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+         A longer description
+
+         WIth more lines than ever!
+
+
+
+Creator: RT_System
+Created: 2020-10-22 08:02:20
+
+Attachments:
+             62: untitled (0b)
+             63: untitled (579b)
+             64: untitled (635b)
+
+
+--
+
+# 1/9 (id/217/total)
+
+id: 217
+Ticket: 23
+TimeTaken: 0
+Type: Status
+Field: Status
+OldValue: new
+NewValue: resolved
+Data:
+Description: Status changed from 'new' to 'resolved' by root
+Content: This transaction appears to have no content
+Creator: root
+Created: 2020-10-22 13:35:42
+Attachments:
+
+--
+
+# 1/9 (id/218/total)
+
+id: 218
+Ticket: 23
+TimeTaken: 0
+Type: EmailRecord
+Field:
+OldValue:
+NewValue:
+Data: <rt-5.0.0-56-1603373742-1303.23-12-0@example.com>
+Description: Outgoing email recorded by RT_System
+
+Content: According to our records, your request has been resolved. If you have any
+         further questions or concerns, please respond to this message.
+
+
+
+Creator: RT_System
+Created: 2020-10-22 13:35:42
+
+Attachments:
+             88: untitled (0b)
+             89: untitled (138b)
+             90: untitled (145b)
+
+
+--
+
+# 1/9 (id/219/total)
+
+id: 219
+Ticket: 23
+TimeTaken: 0
+Type: Comment
+Field:
+OldValue:
+NewValue:
+Data: No Subject
+Description: Comments added by root
+Content: Our first REST comment
+Creator: root
+Created: 2020-10-22 13:45:17
+
+Attachments:
+             91: untitled (22b)
+
+
+--
+
+# 1/9 (id/247/total)
+
+id: 247
+Ticket: 23
+TimeTaken: 0
+Type: CustomField
+Field: 2
+OldValue: d5afcb9cdb4c20106df7a9954b961905
+NewValue:
+Data:
+Description: serviceNowId d5afcb9cdb4c20106df7a9954b961905 deleted by root
+Content: This transaction appears to have no content
+Creator: root
+Created: 2020-10-27 09:06:14
+Attachments:
+
+--
+
+# 1/9 (id/251/total)
+
+id: 251
+Ticket: 23
+TimeTaken: 0
+Type: Comment
+Field:
+OldValue:
+NewValue:
+Data: No Subject
+Description: Comments added by root
+Content: Our second REST comment
+Creator: root
+Created: 2020-11-06 15:06:25
+
+Attachments:
+             119: untitled (23b)
+
+
+--
+
+# 1/9 (id/269/total)
+
+id: 269
+Ticket: 23
+TimeTaken: 0
+Type: Comment
+Field:
+OldValue:
+NewValue:
+Data: No Subject
+Description: Comments added by root
+Content: Our second REST comment
+Creator: root
+Created: 2020-11-12 08:51:29
+
+Attachments:
+             127: untitled (0b)
+             128: untitled (23b)
+             129: MulePromote.png (87.2k)
+
+
+--
+
+# 1/9 (id/270/total)
+
+id: 270
+Ticket: 23
+TimeTaken: 0
+Type: Comment
+Field:
+OldValue:
+NewValue:
+Data: No Subject
+Description: Comments added by root
+Content: Our second REST comment
+Creator: root
+Created: 2020-11-12 08:55:38
+
+Attachments:
+             130: untitled (0b)
+             131: untitled (23b)
+             132: MulePromote.png (87.2k)
+
+

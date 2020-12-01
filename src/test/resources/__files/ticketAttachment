@@ -1,0 +1,21 @@
+RT/5.0.0 200 Ok
+
+id: 1
+Subject:
+Creator: 14
+Created: 2020-11-12 08:55:38
+Transaction: 270
+Parent: 130
+MessageId:
+Filename: MulePromote.png
+ContentType: image/png
+ContentEncoding: base64
+
+Headers: Content-Type: image/png; name="MulePromote.png"
+         Content-Disposition: form-data;
+          filename="MulePromote.png";
+          name="attachment_1"
+         Content-Transfer-Encoding: base64
+         Content-Length: 89299
+
+Content: <imagine png contents here>

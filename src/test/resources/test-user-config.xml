@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:requesttracker="http://www.mulesoft.org/schema/mule/requesttracker"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/requesttracker http://www.mulesoft.org/schema/mule/requesttracker/current/mule-requesttracker.xsd">
+
+    <requesttracker:config name="config">
+        <requesttracker:connection username="root" password="password" host="localhost" port="8080"/>
+    </requesttracker:config>
+
+    <flow name="getUserFlow">
+        <requesttracker:get-user config-ref="config" userId="14"/>
+    </flow>
+
+    <flow name="searchUsersFlow">
+        <requesttracker:search-users config-ref="config" query="id > 0" userName="true" />
+    </flow>
+
+    <flow name="createUserFlow">
+        <requesttracker:create-user config-ref="config">
+            <requesttracker:new-user userName="test" emailAddress="test@test.com"/>
+        </requesttracker:create-user>
+    </flow>
+
+    <flow name="updateUserFlow">
+        <requesttracker:update-user config-ref="config" userId="163">
+            <requesttracker:user-updates emailAddress="test@test.com" />
+        </requesttracker:update-user>
+    </flow>
+
+</mule>

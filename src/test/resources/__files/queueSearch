@@ -1,0 +1,9 @@
+RT/5.0.0 200 Ok
+
+id: queue/1
+Name: General
+Description: The default queue
+CorrespondAddress:
+CommentAddress:
+
+

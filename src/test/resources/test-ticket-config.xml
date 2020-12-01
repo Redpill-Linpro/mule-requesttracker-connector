@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:requesttracker="http://www.mulesoft.org/schema/mule/requesttracker"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/requesttracker http://www.mulesoft.org/schema/mule/requesttracker/current/mule-requesttracker.xsd">
+
+    <requesttracker:config name="config">
+        <requesttracker:connection username="root" password="password" host="localhost" port="8080"/>
+    </requesttracker:config>
+
+    <flow name="getTicketFlow">
+        <requesttracker:get-ticket config-ref="config" ticketId="1"/>
+    </flow>
+
+    <flow name="searchTicketsFlow">
+        <requesttracker:search-tickets config-ref="config" query="id > 0" subject="true"/>
+    </flow>
+
+    <flow name="getTicketLinksFlow">
+        <requesttracker:get-ticket-links config-ref="config" ticketId="1"/>
+    </flow>
+
+    <flow name="getTicketAttachmentsFlow">
+        <requesttracker:get-ticket-attachments config-ref="config" ticketId="1"/>
+    </flow>
+
+    <flow name="getTicketAttachmentFlow">
+        <requesttracker:get-ticket-attachment config-ref="config" ticketId="1" attachmentId="1"/>
+    </flow>
+
+    <flow name="getTicketAttachmentContentFlow">
+        <requesttracker:get-ticket-attachment-content config-ref="config" ticketId="1" attachmentId="1"/>
+    </flow>
+
+    <flow name="getTicketHistorySummaryFlow">
+        <requesttracker:get-ticket-history-summary config-ref="config" ticketId="1"/>
+    </flow>
+
+    <flow name="getTicketHistoryFlow">
+        <requesttracker:get-ticket-history config-ref="config" ticketId="1"/>
+    </flow>
+
+    <flow name="getTicketHistoryEntryFlow">
+        <requesttracker:get-ticket-history-entry config-ref="config" ticketId="1" historyId="187"/>
+    </flow>
+
+    <flow name="createTicketHistoryEntryFlow">
+        <requesttracker:create-history-entry config-ref="config" ticketId="1" id="1">
+            <requesttracker:text><![CDATA[test]]></requesttracker:text>
+            <requesttracker:attachments><![CDATA[#[{a1:"test"}]]]></requesttracker:attachments>
+        </requesttracker:create-history-entry>
+    </flow>
+
+    <flow name="createTicketFlow">
+        <requesttracker:create-ticket config-ref="config">
+            <requesttracker:new-ticket queue="1" subject="subject" priority="1"/>
+        </requesttracker:create-ticket>
+    </flow>
+
+    <flow name="updateTicketFlow">
+        <requesttracker:update-ticket config-ref="config" ticketId="1">
+            <requesttracker:ticket-updates queue="2"/>
+        </requesttracker:update-ticket>
+    </flow>
+
+    <flow name="updateTicketLinksFlow">
+        <requesttracker:update-ticket-links config-ref="config" ticketId="1">
+            <requesttracker:ticket-links-updates hasMember="test"/>
+        </requesttracker:update-ticket-links>
+    </flow>
+
+    <flow name="mergeTicketsFlow">
+        <requesttracker:merge-tickets config-ref="config" originTicketId="1" intoTicketId="2" />
+    </flow>
+
+</mule>

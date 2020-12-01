@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:requesttracker="http://www.mulesoft.org/schema/mule/requesttracker"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/requesttracker http://www.mulesoft.org/schema/mule/requesttracker/current/mule-requesttracker.xsd">
+
+    <requesttracker:config name="config">
+        <requesttracker:connection username="root" password="password" host="localhost" port="8080"/>
+    </requesttracker:config>
+
+    <flow name="getQueueFlow">
+        <requesttracker:get-queue config-ref="config" queueId="1"/>
+    </flow>
+
+    <flow name="searchQueuesFlow">
+        <requesttracker:search-queues config-ref="config" query="id > 0"/>
+    </flow>
+
+</mule>

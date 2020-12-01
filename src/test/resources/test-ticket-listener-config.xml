@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:test="http://www.mulesoft.org/schema/mule/test"
+      xmlns:requesttracker="http://www.mulesoft.org/schema/mule/requesttracker"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/requesttracker http://www.mulesoft.org/schema/mule/requesttracker/current/mule-requesttracker.xsd
+            http://www.mulesoft.org/schema/mule/test http://www.mulesoft.org/schema/mule/test/current/mule-test.xsd">
+
+    <requesttracker:config name="config">
+        <requesttracker:connection username="root" password="password" host="localhost" port="8080"/>
+    </requesttracker:config>
+
+    <flow name="onNewTicket" initialState="stopped">
+        <requesttracker:new-ticket-listener config-ref="config">
+            <scheduling-strategy>
+                <fixed-frequency frequency="1000"/>
+            </scheduling-strategy>
+        </requesttracker:new-ticket-listener>
+        <flow-ref name="onEvent"/>
+    </flow>
+
+
+    <sub-flow name="onEvent">
+        <test:processor class="org.mule.extension.requesttracker.integration.RequestTrackerTicketListenerTest$AddMessageToList"/>
+    </sub-flow>
+</mule>

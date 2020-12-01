@@ -1,0 +1,11 @@
+RT/5.0.0 200 Ok
+
+id: user/14
+Password: ********
+Name: root
+EmailAddress: root@localhost
+RealName: Enoch Root
+Gecos: root
+Comments: SuperUser
+Privileged: 1
+Disabled: 0

@@ -1,0 +1,26 @@
+RT/5.0.0 200 Ok
+
+id: ticket/1
+Queue: General
+Owner: root
+Creator: root
+Subject: Test
+Status: new
+Priority: 0
+InitialPriority: 0
+FinalPriority: 0
+Requestors: root@localhost
+Cc:
+AdminCc:
+Created: Thu Oct 01 10:40:59 2020
+Starts: Not set
+Started: Not set
+Due: Not set
+Resolved: Not set
+Told: Not set
+LastUpdated: Fri Oct 02 11:56:44 2020
+TimeEstimated: 0
+TimeWorked: 0
+TimeLeft: 0
+CF.{serviceNowId}:
+

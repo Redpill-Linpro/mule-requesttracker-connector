@@ -1,0 +1,131 @@
+RT/5.0.0 200 Ok
+
+id: ticket/1
+Subject: Test
+
+--
+
+id: ticket/3
+Subject: Email service now responding
+
+--
+
+id: ticket/4
+Subject: TestCreate
+
+--
+
+id: ticket/6
+Subject: Pretty short description
+
+--
+
+id: ticket/10
+Subject: All my keys are black
+
+--
+
+id: ticket/11
+Subject: My screen is blue
+
+--
+
+id: ticket/12
+Subject: Permissionstest
+
+--
+
+id: ticket/13
+Subject: So we need to get this close comment to work
+
+--
+
+id: ticket/14
+Subject: Resolved comments still not working
+
+--
+
+id: ticket/15
+Subject: A short description
+
+--
+
+id: ticket/16
+Subject: TestCreateWithRequest01
+
+--
+
+id: ticket/17
+Subject: Is the watchlist working?
+
+--
+
+id: ticket/18
+Subject: TestCreateCC01
+
+--
+
+id: ticket/19
+Subject: TestCreateCC02
+
+--
+
+id: ticket/20
+Subject: Testing Multiple Watchers
+
+--
+
+id: ticket/21
+Subject: So we need to get this close comment to work
+
+--
+
+id: ticket/22
+Subject: Resolved comments still not working
+
+--
+
+id: ticket/23
+Subject: A short description
+
+--
+
+id: ticket/24
+Subject: Is the watchlist working?
+
+--
+
+id: ticket/25
+Subject: A debug test of Watchers
+
+--
+
+id: ticket/26
+Subject: Remove the watchers!
+
+--
+
+id: ticket/27
+Subject: Remove the watchers!
+
+--
+
+id: ticket/28
+Subject: Should close
+
+--
+
+id: ticket/29
+Subject: Resolve in ServiceNow
+
+--
+
+id: ticket/30
+Subject: Updated By Mule 2020-11-09T14:44:51.481+01:00
+
+--
+
+id: ticket/31
+Subject: Created by Mule 2020-11-09T14:53:18.043+01:00
+
+

@@ -1,0 +1,85 @@
+RT/5.0.0 200 Ok
+
+id: user/93
+Name: admin@example.com
+EmailAddress: admin@example.com
+RealName:
+Gecos:
+Organization:
+Comments: Autocreated when added as a watcher
+Privileged:
+Disabled: 0
+
+--
+
+id: user/155
+Name: Peter Test
+EmailAddress:
+RealName:
+Gecos:
+Organization: Boring People Inc.
+Comments:
+Privileged:
+Disabled: 0
+
+--
+
+id: user/161
+Name: Phillip
+EmailAddress: p@test.com
+RealName:
+Gecos:
+Organization: Boring People Inc.
+Comments:
+Privileged:
+Disabled: 0
+
+--
+
+id: user/87
+Name: PostMan@test.com
+EmailAddress: PostMan@test.com
+RealName:
+Gecos:
+Organization:
+Comments: Autocreated when added as a watcher
+Privileged:
+Disabled: 0
+
+--
+
+id: user/14
+Name: root
+EmailAddress: root@localhost
+RealName: Enoch Root
+Gecos: root
+Organization:
+Comments: SuperUser
+Privileged: 1
+Disabled: 0
+
+--
+
+id: user/105
+Name: test2@test.com
+EmailAddress: test2@test.com
+RealName:
+Gecos:
+Organization:
+Comments: Autocreated when added as a watcher
+Privileged:
+Disabled: 0
+
+--
+
+id: user/99
+Name: test@test.com
+EmailAddress: test@test.com
+RealName:
+Gecos:
+Organization:
+Comments: Autocreated when added as a watcher
+Privileged:
+Disabled: 0
+
+
