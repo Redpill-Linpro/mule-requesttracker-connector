@@ -24,11 +24,9 @@ To build the connector download the code and run "mvn install"
 
 Because "mvn install" adds the package to your local maven repo, you can edit your Mule projects pom.xml file and add the dependency there:
 
---- 
     <dependency>
         <groupId>com.redpillinpro.requestTrackerMuleConnector</groupId>
         <artifactId>mule-requesttracker-connector</artifactId>
         <version>1.0.2-SNAPSHOT</version>
         <classifier>mule-plugin</classifier>
     </dependency>
----
