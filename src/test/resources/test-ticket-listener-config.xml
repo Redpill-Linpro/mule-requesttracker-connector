@@ -12,11 +12,11 @@
     </requesttracker:config>
 
     <flow name="onNewTicket" initialState="stopped">
-        <requesttracker:new-ticket-listener config-ref="config">
+        <requesttracker:updated-ticket-listener config-ref="config" updateField="CREATED">
             <scheduling-strategy>
                 <fixed-frequency frequency="1000"/>
             </scheduling-strategy>
-        </requesttracker:new-ticket-listener>
+        </requesttracker:updated-ticket-listener>
         <flow-ref name="onEvent"/>
     </flow>
 

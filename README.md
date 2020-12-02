@@ -12,6 +12,7 @@ Currently, this allows you to:
  * Create, Get, Update and Search Users
  * Get, Search Queues
  * Create, Get, Update, Merge and Search Tickets
+ * Poll for ticket updates (based on either Created, LastUpdate, Resolved or Started timestamps)
  * Get and Update Ticket Links
  * List and Get Ticket attachments
  * List, Get, Create and List Summary of Ticket History Entries (comments)

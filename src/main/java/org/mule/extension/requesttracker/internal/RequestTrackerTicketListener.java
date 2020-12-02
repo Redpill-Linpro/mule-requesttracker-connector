@@ -2,15 +2,14 @@ package org.mule.extension.requesttracker.internal;
 
 import org.mule.extension.requesttracker.api.models.request.TicketFields;
 import org.mule.extension.requesttracker.api.models.response.Ticket;
+import org.mule.extension.requesttracker.api.enums.TargetField;
 import org.mule.extension.requesttracker.internal.utils.FieldUtils;
 import org.mule.extension.requesttracker.internal.utils.RequestTrackerResponseConverter;
 import org.mule.runtime.api.connection.ConnectionProvider;
 import org.mule.runtime.api.exception.MuleException;
 import org.mule.runtime.extension.api.annotation.Alias;
-import org.mule.runtime.extension.api.annotation.dsl.xml.ParameterDsl;
 import org.mule.runtime.extension.api.annotation.param.*;
 import org.mule.runtime.extension.api.annotation.param.display.DisplayName;
-import org.mule.runtime.extension.api.annotation.param.display.Placement;
 import org.mule.runtime.extension.api.annotation.param.display.Summary;
 import org.mule.runtime.extension.api.runtime.operation.Result;
 import org.mule.runtime.extension.api.runtime.source.PollContext;
@@ -27,15 +26,19 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
-@Alias("newTicketListener")
-@DisplayName("On New Ticket")
-@Summary("Triggers when a new Ticket is created")
+@Alias("updatedTicketListener")
+@DisplayName("On Ticket Updated")
+@Summary("Triggers when a new Ticket is updated")
 public class RequestTrackerTicketListener extends PollingSource<Ticket, String> {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(RequestTrackerTicketListener.class);
 
     @Connection
     private ConnectionProvider<RequestTrackerConnection> connectionProvider;
+
+    @Parameter
+    @Summary("Field to check for updates on")
+    private TargetField updateField;
 
     @Optional
     @Parameter
@@ -75,7 +78,7 @@ public class RequestTrackerTicketListener extends PollingSource<Ticket, String> 
         }
         Map<String, String> params = new HashMap<>();
         LocalDateTime fromTime = pollContext.getWatermark().isPresent() ? (LocalDateTime) pollContext.getWatermark().get() : initialFromTime;
-        params.put("query", "Created > '" + DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").format(fromTime) + "'");
+        params.put("query", updateField.getFieldName() + " > '" + DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").format(fromTime) + "'");
         params.put("fields", FieldUtils.asParam(fields, TicketFields.class));
         try {
             List<Ticket> tickets = RequestTrackerResponseConverter.convertResponse(conn.get("search/ticket", params).getBody(), Ticket.class);
@@ -84,7 +87,20 @@ public class RequestTrackerTicketListener extends PollingSource<Ticket, String> 
                 pollContext.accept(item -> {
                     Result<Ticket, String> result = Result.<Ticket, String>builder().output(ticket).attributes(ticket.getId()).build();
                     item.setResult(result);
-                    item.setWatermark(ticket.getCreated() == null ? LocalDateTime.now() : ticket.getCreated());
+                    switch (updateField) {
+                        case CREATED:
+                            item.setWatermark(ticket.getCreated() == null ? LocalDateTime.now() : ticket.getCreated());
+                            break;
+                        case UPDATED:
+                            item.setWatermark(ticket.getLastUpdated() == null ? LocalDateTime.now() : ticket.getLastUpdated());
+                            break;
+                        case RESOLVED:
+                            item.setWatermark(ticket.getResolved() == null ? LocalDateTime.now() : ticket.getResolved());
+                            break;
+                        case STARTED:
+                            item.setWatermark(ticket.getStarted() == null ? LocalDateTime.now() : ticket.getStarted());
+                            break;
+                    }
                     item.setId(ticket.getId());
                 });
             }
