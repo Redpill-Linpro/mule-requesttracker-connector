@@ -22,15 +22,15 @@ One operator, "Search queues", in this connector, was not found in the documenta
 ## Building and installing
 To build the connector download the code and run "mvn install"
 
-RequestTrackerMuleConnector-1.0.0-mule-plugin.jar can then be found in the "target" directory
+RequestTrackerMuleConnector-\<version>-mule-plugin.jar can then be found in the "target" directory
 
-Within Anypoint Studio you can load a local .jar file. 
- 1. Either click on the small cog in your Mule Palette og right click your Mule Configuration file -> Manage Dependencies -> Manage Modules. 
+Within Anypoint Studio you can load a local .jar file: 
+ 1. Either click on the small cog in your Mule Palette or right click your Mule Configuration file -> Manage Dependencies -> Manage Modules. 
  2. Click the green + (Plus symbol)
  3. Click "from Maven"
- 4. Click on the Install button to Install a local dependency
+ 4. Click on the "Install" button to install a local dependency
  5. Click "Browse..." next til the "File" input field
- 6. Navigate to the "target" directory and open the file RequestTrackerMuleConnector-1.0.0-mule-plugin.jar
+ 6. Navigate to the "target" directory and open the file RequestTrackerMuleConnector-\<version>-mule-plugin.jar
  7. Click the "Install" button
  8. Click "OK"
  9. Click "Apply and Close"
