@@ -1,8 +1,6 @@
 package org.mule.extension.requesttracker.internal;
 
-import org.mule.extension.requesttracker.api.models.response.Ticket;
 import org.mule.extension.requesttracker.internal.errors.RequestTrackerError;
-import org.mule.runtime.extension.api.annotation.Export;
 import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.Operations;
 import org.mule.runtime.extension.api.annotation.Sources;
@@ -21,7 +19,6 @@ import org.mule.runtime.extension.api.annotation.error.ErrorTypes;
 @Sources(RequestTrackerTicketListener.class)
 @Operations({RequestTrackerTicketOperations.class, RequestTrackerUserOperations.class, RequestTrackerQueueOperations.class})
 @ErrorTypes(RequestTrackerError.class)
-@Export(classes = Ticket.class)
 public class RequestTrackerConnector {
 
 }
