@@ -27,6 +27,6 @@ Because "mvn install" adds the package to your local maven repo, you can edit yo
     <dependency>
         <groupId>com.redpillinpro.requestTrackerMuleConnector</groupId>
         <artifactId>mule-requesttracker-connector</artifactId>
-        <version>1.0.2-SNAPSHOT</version>
+        <version>1.0.3-SNAPSHOT</version>
         <classifier>mule-plugin</classifier>
     </dependency>
