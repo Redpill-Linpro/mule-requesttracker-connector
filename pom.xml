@@ -11,7 +11,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.redpillinpro.requestTrackerMuleConnector</groupId>
+    <groupId>com.redpil-linpro</groupId>
     <artifactId>mule-requesttracker-connector</artifactId>
     <packaging>mule-extension</packaging>
     <version>1.0.3-SNAPSHOT</version>
