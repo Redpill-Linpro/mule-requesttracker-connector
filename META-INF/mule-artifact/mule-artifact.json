@@ -1,0 +1,17 @@
+{
+  "configs": [],
+  "redeploymentEnabled": true,
+  "name": "mule-requesttracker-connector",
+  "minMuleVersion": "4.0.0",
+  "requiredProduct": "MULE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedResources": []
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

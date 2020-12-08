@@ -19,6 +19,20 @@
     <name>RequestTracker Extension</name>
     <description>A Mule extension that provides functionality for the Request Tracker REST 1.0 API</description>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.mule.tools.maven</groupId>
+                <artifactId>mule-maven-plugin</artifactId>
+                <version>3.3.5</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <classifier>mule-plugin</classifier>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -64,21 +78,6 @@
 
     </dependencies>
 
-    <distributionManagement>
-        <downloadUrl>http://www.mulesoft.org/display/MULE/Download</downloadUrl>
-        <repository>
-            <id>mule-releases</id>
-            <name>Mule Release Repository</name>
-            <url>https://repository-master.mulesoft.org/nexus/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>mule-snapshots</id>
-            <name>Mule Snapshot Repository</name>
-            <url>https://repository-master.mulesoft.org/nexus/content/repositories/snapshots</url>
-            <uniqueVersion>false</uniqueVersion>
-        </snapshotRepository>
-    </distributionManagement>
-
     <repositories>
         <repository>
             <id>mule</id>
@@ -92,6 +91,10 @@
             <id>mule-plugin</id>
             <name>Mule Repository</name>
             <url>https://repository.mulesoft.org/nexus/content/repositories/public/</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>mule-public</id>
+            <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
         </pluginRepository>
     </pluginRepositories>
 </project>
