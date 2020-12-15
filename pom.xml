@@ -14,7 +14,7 @@
     <groupId>com.redpil-linpro</groupId>
     <artifactId>mule-requesttracker-connector</artifactId>
     <packaging>mule-extension</packaging>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
 
     <name>RequestTracker Extension</name>
     <description>A Mule extension that provides functionality for the Request Tracker REST 1.0 API</description>
@@ -27,7 +27,7 @@
                 <version>3.3.5</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <classifier>mule-plugin</classifier>
+                    <classifier>mule-application</classifier>
                 </configuration>
             </plugin>
         </plugins>
